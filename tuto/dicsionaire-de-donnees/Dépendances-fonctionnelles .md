@@ -2,7 +2,7 @@
 idProduit -> nomProduit , prixProduit
 
 ## Commande
-idCommande -> numeroCommande , dateCommande 
+idCommande -> numeroCommande , dateCommande , nomClient , emailClient
 
 ## CommandeProduit
 idProduit , idComande -> quantiteCommande
