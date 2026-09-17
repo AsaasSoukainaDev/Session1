@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once '../config.php';
 
 $sql = "SELECT r.nom, r.image, r.ingredients, r.instructions, r.date_creation,
                c.nom AS chef_nom, c.prenom AS chef_prenom,
@@ -17,7 +17,7 @@ $recettes = $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <title>Afficher les recettes</title>
-    <link rel="stylesheet" href="style/affcher.css">
+    <link rel="stylesheet" href="../style/affcher.css">
 </head>
 <body>
     <div class="container">

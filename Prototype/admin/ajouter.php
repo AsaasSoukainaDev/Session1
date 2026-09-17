@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once '../config.php';
 
 $chefs = $pdo->query("SELECT * FROM chef ORDER BY nom")->fetchAll(PDO::FETCH_ASSOC);
 $types = $pdo->query("SELECT * FROM type_cuisine ORDER BY libelle")->fetchAll(PDO::FETCH_ASSOC);
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Ajouter une recette</title>
-    <link rel="stylesheet" href="style/ajouter.css">
+    <link rel="stylesheet" href="../style/ajouter.css">
 </head>
 <body>
     <div class="container">
