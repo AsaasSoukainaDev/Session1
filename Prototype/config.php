@@ -1,13 +1,26 @@
 <?php
+
 $host = "localhost";
-$dbname = "recettes_cuisine";
-$user = "root";
-$pass = "";
+$port = "3307";
+$dbname = "recettes_db";
+$username = "root";
+$password = "Mysql@123";
 
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $user, $pass);
+
+    $pdo = new PDO(
+        "mysql:host=$host;port=$port;dbname=$dbname;charset=utf8mb4",
+        $username,
+        $password
+    );
+
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+
+
 } catch (PDOException $e) {
-    die("Erreur de connexion : " . $e->getMessage());
+
+    echo "Erreur de connexion : " . $e->getMessage();
+
 }
-?>  
+?>
